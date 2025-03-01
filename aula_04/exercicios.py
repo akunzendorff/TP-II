@@ -146,18 +146,71 @@
 
 # # 11) Dado uma lista com nomes ["Luiz","Ana","Cristina","Fernanda","Maria Alice", "Joaquina" ] Utilize o while e if para fazer a repetição perguntando se o usuário digitar 1 ele faz a busca se apertar 0 , sai da aplicação. Se o usuário escolher fazer a busca: Digite um nome para localizar , se existir o nome na lista , mostre uma mensagem com o nome encontrado, e pare a repetição, caso não encontre mostre nome não encontrado. (UTILIZE FOR E IF)
 
+# nomes = ["Luiz", "Ana", 'Cristina', 'Fernanda', 'Maria Alice', 'Joaquina']
 
+# numero = int(input("Digite 1 para fazer a busca ou 0 para sair: "))
+
+# while numero != 0:
+#     if numero == 1:
+#         nome_localizar = input("Digite um nome para localizar: ").title()
+
+#         nome_encontrado = False
+
+#         for nome in nomes:
+#             if nome_localizar == nome:
+#                 print(f"O nome {nome_localizar} foi encontrado!")
+#                 nome_encontrado = True
+#                 break
+
+#         if not nome_encontrado:
+#             print(f"O nome {nome_localizar} não foi encontrado...")
+
+#     else:
+#         print("Número inválido")
+
+#     numero = int(input("Digite 1 para fazer a busca ou 0 para sair: "))
+
+# print("Finalizando a aplicação...")
 
 # # ------------------------------------------------------------------------------------------------------------------------------------------------
 
 # # 12) Digite 7 nomes e armazene esses valores em uma lista e mostre os nomes que foram armazenados , e sua posição na lista. (UTILIZE FOR)
 
+# nomes = []
 
+# for i in range(7):
+#     nome = input("Insira um nome:")
+#     nomes.append(nome)
+    
+# for i, nome in enumerate(nomes):
+#     print(f"Nome: {nome.ljust(20)} | Posição na lista: {i+1}")
 
 # # ------------------------------------------------------------------------------------------------------------------------------------------------
 
 # # 13) Leia 10 números e verifique e se são números pares ou ímpares , e mostre os números pares e os números ímpares (UTILIZE FOR E IF)
 
+# numeros = []
+# pares = []
+# impares = []
+
+# for i in range(10):
+#     numero = int(input("Digite um número: "))
+#     numeros.append(numero)
+
+#     if numero % 2 == 0:
+#         pares.append(numero)
+
+#     elif numero % 2 == 1:
+#         impares.append(numero)
+
+# print("\n**Números pares**\n")
+# for numero_par in pares:
+#     print(f" - {numero_par}")
+
+
+# print("\n**Números ímpares**\n")
+# for numero_impar in impares:
+#     print(f" - {numero_impar}")
 
 
 # # ------------------------------------------------------------------------------------------------------------------------------------------------
@@ -170,27 +223,146 @@
 
 # # 15) Na sequência de 1 a 800 mostre a soma de todos os números utilizando a estrutura While
 
+# i = 1
+# soma = 0
+
+# while i <= 800:
+#     soma = soma + i
+#     i += 1
+
+# print(f"A soma dos números de 1 a 800 é: {soma}")
 
 # # ------------------------------------------------------------------------------------------------------------------------------------------------
 
 # # 16) Na sequência de 1 a 750 mostre os número com espaçamento de 4 em 4, e no final mostre a quantidade de número que foram mostrados na tela (UTILIZE FOR)
 
+# numeros_exibidos = 0
+
+# for i in range(750):
+
+#     if i % 4 == 0:
+#         print(f" - {i+1}")
+#         numeros_exibidos += 1
+
+#     i += 1
+
+# print(f"A quantidade de números exibidos foi: {numeros_exibidos}")
+
 # # ------------------------------------------------------------------------------------------------------------------------------------------------
 
 # # 17) Dado a lista de Linguagens de Programação: ["python","c#","Visual Basic","C++","Delphi","Cobol"] Mostre somente as linguagens que possui mais de 3 caracteres, e no final mostre a quantidade de caracteres, de todas as linguagens da lista. (UTILIZE FOR E IF)
+
+# linguagens = ["python","c#","Visual Basic","C++","Delphi","Cobol"]
+
+# print("\nLinguagens com mais de três caracteres:\n")
+
+# for linguagem in linguagens:
+#     if len(linguagem) > 3:
+#         print(f"- {linguagem}")
+
+# print("\nQuantidade de caracteres de cada linguagem: \n")
+
+# for linguagem in linguagens:
+#     print(f"{linguagem.ljust(15)} | {len(linguagem)} caracteres")
 
 # # ------------------------------------------------------------------------------------------------------------------------------------------------
 
 # # 18) Digite o nome de uma linguagem e verifique se o nome está na lista: ["python","c#","Visual Basic","C++","Delphi","Cobol","Clipper","PHP","Java"] Se o nome digitado estiver na lista, diga que foi encontrado, senão tiver diga que não foi encontrado , no final mostre a posição na lista, que se encontra o nome da linguagem digitada (UTILIZE FOR E IF)
 
+# linguagens = ["Python","c#","Visual Basic","C++","Delphi","Cobol","Clipper","PHP","Java"]
+
+# linguagem_encontrada = False
+
+# linguagem_localizar = input("Digite a linguagem a ser localizada: ").title()
+
+# for i, linguagem in enumerate(linguagens):
+
+#     if linguagem_localizar == linguagem:
+#         print(f"A linguagem {linguagem_localizar} foi encontrada na posição {i+1}!")
+#         linguagem_encontrada = True
+#         break
+
+# if not linguagem_encontrada:
+#     print(f"A linguagem {linguagem_localizar} não foi encontrada...")
+
 # # ------------------------------------------------------------------------------------------------------------------------------------------------
 
 # # 19) Dado uma lista de vogais, digite 10 letras e verifique se a letra digitada é uma vogal, verifique na lista de vogais , se a letra estiver na lista, diga que a letra digitada é uma vogal. (UTILIZE FOR E IF)
+
+# vogais = ['a', 'e', 'i', 'o', 'u']
+# letras = []
+
+# for i in range(10):
+#     letra = input("Digite uma letra: ").lower()
+#     letras.append(letra)
+
+
+# for letra in letras:
+#     if letra in vogais:
+#         print(f"A letra {letra} é uma vogal!")
+
+#     else:
+#         print(f"A letra {letra} não é uma vogal.")
+
+# OU
+
+# conjunto_vogais = ['a', 'e', 'i', 'o', 'u']
+# letras = []
+# consoantes = []
+# vogais = []
+
+# for i in range(10):
+#     letra = input("Digite uma letra: ").lower()
+#     letras.append(letra)
+
+
+# for letra in letras:
+#     if letra in conjunto_vogais:
+#         vogais.append(letra)
+
+#     else:
+#         consoantes.append(letra)
+
+# print("**VOGAIS**")
+
+# for vogal in vogais:
+#     print(f" - {vogal}")
+
+
+# print("**CONSOANTES**")
+
+# for consoante in consoantes:
+#     print(f" - {consoante}")
 
 # # ------------------------------------------------------------------------------------------------------------------------------------------------
 
 # # 20) Crie uma lista de 1 a 20 números e mostre apenas os números que são múltiplos de 3, e diga quantos números são múltiplos de 3 (UTILIZE FOR)
 
+# numeros = range(20)
+# multiplos = 0
+
+# print("***Números entre 1 e 20 que são multiplos de 3***")
+
+# for numero in numeros:
+#     if numero % 3 == 0:
+#         print(f" - {numero}")
+#         multiplos += 1
+
+# print(f"A quantidade de números multiplos de três entre 1 e 20 são: {multiplos}")
+
 # # ------------------------------------------------------------------------------------------------------------------------------------------------
 
 # # 21) Uma empresa precisa fazer um determinado exame, somente para os funcionários do sexo masculino , digite o nome e o sexo dos 15 funcionários da empresa, e mostre o nome , e se necessita fazer o exame. Verifique se o usuário digitou F ou M , senão mostre que o sexo foi digitado incorretamente. (UTILIZE WHILE E IF)
+
+for i in range(15):
+    nome = input("Digite o nome do funcionário: ").title()
+    sexo = input(f"Digite o sexo do funcionário {nome}: ").upper()
+
+    if sexo == 'M':
+        print(f"O funcionário {nome} precisa fazer o exame!")
+
+    elif sexo == 'F':
+        print(f"A funcionária {nome} não precisa fazer o exame!")
+
+    else:
+        print(f"O sexo do funcionário {nome} foi digitado incorretamente...")
